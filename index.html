@@ -18,12 +18,12 @@
         <span></span>
         <span></span>
         <ul id="mobile-nav">
-          <a href="#"><li>Home</li></a>
-          <a href="#"><li>About</li></a>
-          <a href="#"><li>Services</li></a>
-          <a href="#"><li>Portfolio</li></a>
-          <a href="#"><li>Pricing</li></a>
-          <a href="#"><li>Contact Us</li></a>
+          <a href="#slider"><li>Home</li></a>
+          <a href="#about"><li>About</li></a>
+          <a href="#services"><li>Services</li></a>
+          <a href="#portfolio"><li>Portfolio</li></a>
+          <a href="#pricing"><li>Pricing</li></a>
+          <a href="#contact"><li>Contact Us</li></a>
         </ul>
     </div>
 <!--navigation-->
@@ -32,8 +32,8 @@
             <div class="logo"></div>
             <nav class="menu">
                 <ul class="menu__list">
-                    <li class="menu__item">
-                        <a class="menu__link active"" href="#home">home</a>
+                    <li class="menu__item active">
+                        <a class="menu__link" href="#slider">home</a>
                     </li>
                     <li class="menu__item">
                         <a class="menu__link" href="#about">about</a>
@@ -174,24 +174,24 @@
                 <p class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
             </div>
             <div class="portfolio-menu">
-                <ul class="portfolio-list">
-                    <li class="portfolio-item"><a href="#">All</a></li>
-                    <li class="portfolio-item"><a href="#">Studio</a></li>
-                    <li class="portfolio-item"><a href="#">Photography</a></li>
-                    <li class="portfolio-item"><a href="#">Storybook</a></li>
-                    <li class="portfolio-item"><a href="#">Branding</a></li>
+                <ul class="portfolio-list gallery-filters">
+                    <li class="portfolio-item snappy" gallery-filter="all"><a href="#">All</a></li>
+                    <li class="portfolio-item" gallery-filter="studio"><a href="#">Studio</a></li>
+                    <li class="portfolio-item" gallery-filter="photography"><a href="#">Photography</a></li>
+                    <li class="portfolio-item" gallery-filter="storybook"><a href="#">Storybook</a></li>
+                    <li class="portfolio-item" gallery-filter="branding"><a href="#">Branding</a></li>
                 </ul>
             </div>
         </div>
         <div class="portfolio-row-up no-pad">
-            <div class="portfolio-img portfolio-one col-12 col-sm-6 col-md-4 col-lg-3"></div>
-            <div class="portfolio-img portfolio-two col-12 col-sm-6 col-md-4 col-lg-3"></div>
-            <div class="portfolio-img portfolio-three col-12 col-sm-6 col-md-4 col-lg-3"></div>
-            <div class="portfolio-img portfolio-four col-12 col-sm-6 col-md-4 col-lg-3"></div>
-            <div class="portfolio-img portfolio-five col-12 col-sm-6 col-md-4 col-lg-3"></div>
-            <div class="portfolio-img portfolio-six col-12 col-sm-6 col-md-4 col-lg-3"></div>
-            <div class="portfolio-img portfolio-seven col-12 col-sm-6 col-md-4 col-lg-3"></div>
-            <div class="portfolio-img portfolio-eight col-12 col-sm-6 col-md-4 col-lg-3"></div>
+            <div class="portfolio-img portfolio-one col-12 col-sm-6 col-md-4 col-lg-3 gallery-img-holder" filter-category="branding"></div>
+            <div class="portfolio-img portfolio-two col-12 col-sm-6 col-md-4 col-lg-3 gallery-img-holder" filter-category="photography"></div>
+            <div class="portfolio-img portfolio-three col-12 col-sm-6 col-md-4 col-lg-3 gallery-img-holder" filter-category="photography"></div>
+            <div class="portfolio-img portfolio-four col-12 col-sm-6 col-md-4 col-lg-3 gallery-img-holder" filter-category="studio"></div>
+            <div class="portfolio-img portfolio-five col-12 col-sm-6 col-md-4 col-lg-3 gallery-img-holder" filter-category="studio"></div>
+            <div class="portfolio-img portfolio-six col-12 col-sm-6 col-md-4 col-lg-3 gallery-img-holder" filter-category="storybook"></div>
+            <div class="portfolio-img portfolio-seven col-12 col-sm-6 col-md-4 col-lg-3 gallery-img-holder" filter-category="photography"></div>
+            <div class="portfolio-img portfolio-eight col-12 col-sm-6 col-md-4 col-lg-3 gallery-img-holder" filter-category="photography"></div>
         </div>
     </section>
     <section id="stats" class="scrollspy">
@@ -402,10 +402,7 @@
         <div class="cover">
             <div class="footer-wrapper">
                 <div class="footer-box-left">
-                    <div class="footer-icon"></div>
-                    <div class="footer-can">
-
-                    </div>
+                    <div class="footer-icon"></div><span class="footer-icon-title footer-subtitle">Love Photography</span>
                     <ul class="footer-menu">
                         <li>
                             About us
@@ -439,26 +436,14 @@
                     </ul>
                 </div>
                 <div class="footer-box-right">
-                    <div class="footer-subtitle">Shortcuts</div>
+                    <div class="footer-subtitle footer-underscore">Shortcuts</div>
                     <ul class="footer-menu">
-                        <li>
-                            home
-                        </li>
-                        <li>
-                            about
-                        </li>
-                        <li>
-                            services
-                        </li>
-                        <li>
-                            portfolio
-                        </li>
-                        <li>
-                            pricing
-                        </li>
-                        <li>
-                            contact us
-                        </li>
+                        <li><a class="footer-link" href="#slider">home</a></li>
+                        <li><a class="footer-link" href="#about">about</a></li>
+                        <li><a class="footer-link" href="#services">services</a></li>
+                        <li><a class="footer-link" href="#portfolio">portfolio</a></li>
+                        <li><a class="footer-link" href="#pricing">pricing</a></li>
+                        <li><a class="footer-link" href="#contact">contact us</a></li>
                     </ul>
                 </div>
             </div>
