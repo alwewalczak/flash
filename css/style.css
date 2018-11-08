@@ -120,8 +120,8 @@ a.menu__link:hover {
 }
 
 .cover {
-    padding-right: 1rem;
-    padding-left: 1rem;
+    padding-right: 2rem;
+    padding-left: 2rem;
     margin: 0 auto;
     max-width: 1100px;
 }
@@ -547,9 +547,10 @@ input[type=text] {
     border: 1px solid #416584;
 }
 
-input::placeholder {
-    color: rgba(255, 255, 255, 0.5);
+input::placeholder, textarea::placeholder {
+    color: rgba(255, 255, 255, 0.3);
 }
+
 
 .form-message {
     width: 100%;
@@ -570,14 +571,14 @@ textarea {
 
 .form-button {
     display: block;
-    font-weight: 500;
-    border: 1px solid #416584;
+    font-weight: 400;
+    border: 1px solid rgba(255, 255, 255, 0.5);
     padding: 10px 20px;
     font-size: 1rem;
     text-transform: uppercase;
     cursor: pointer;
     margin: 10px auto;
-    padding: 7px 40px;
+    padding: 7px 80px;
     color: white;
     background-color: transparent;
     transition: all 0.3s ease;
@@ -635,7 +636,7 @@ footer {
     letter-spacing: 1.5px;
     padding: 5px 0;
     text-transform: lowercase;
-    text-align: center;
+    text-align: left;
 }
 
 .footer-menu li:hover {
@@ -737,8 +738,8 @@ footer {
 #menuToggle {
   display: none;
   position: absolute;
-  top: 50px;
-  right: 50px;
+  top: 25px;
+  right: 25px;
   z-index: 1;
   -webkit-user-select: none;
   user-select: none;
@@ -878,6 +879,7 @@ footer {
     #menuToggle {
         display: block;
         cursor: pointer;
+        position: fixed;
     }
 
     #mobile-nav {
@@ -895,12 +897,27 @@ footer {
 
 /* Small devices */
 @media (max-width: 576px) {
+    h2 {
+        font-size: 2.5rem;
+    }
+
+    .row {
+        padding: 0;
+    }
+
+    .about-img  {
+        background-size: contain;
+    }
+
+    .about-version {
+        padding-left: 0;
+    }
+
     .services-can {
-        margin: 10px 60px;
+        margin: 20px 0;
     }
 
     .subtitle {
-        padding: 0px 50px;
         text-align: center;
     }
 
@@ -914,6 +931,22 @@ footer {
         padding: 20px 20px 0;
         display: flex;
         flex-direction: column;
+    }
+
+    form {
+        padding: 0;
+    }
+
+    .form-button {
+        width: 100%;
+    }
+
+    footer {
+        padding: 50px 0;
+    }
+
+    .footer-box-right .footer-menu {
+        padding-top: 0.8rem;
     }
 
     .footer-wrapper {
@@ -930,6 +963,7 @@ footer {
     .footer-subtitle.open ~ ul {
         height: auto;
         max-height: 250px;
+        padding-bottom: 0.8rem;
     }
 
     .footer-icon {
@@ -967,6 +1001,7 @@ footer {
     .footer-subtitle.open::after {
         transform: rotate(45deg);
         transition: all .3s ease-in-out;
+        top: calc(50% - 4px);
     }
 
 }
