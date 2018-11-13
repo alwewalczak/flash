@@ -78,4 +78,12 @@ $("document").ready(function(){
                     }
                 });
             });
+
+            $("#menuToggle").on("click", function(){
+                event.stopPropagation();
+                $(this).toggleClass("open");
+            })
+            $(".page").on("click", function(){
+                $("#menuToggle").removeClass("open");
+            })
         });

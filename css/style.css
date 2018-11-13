@@ -740,7 +740,7 @@ footer {
   position: absolute;
   top: 25px;
   right: 25px;
-  z-index: 1;
+  z-index: 5;
   -webkit-user-select: none;
   user-select: none;
 }
@@ -808,9 +808,8 @@ footer {
 #mobile-nav {
   position: absolute;
   width: 250px;
-  margin: -100px 0 0 0;
   padding: 50px;
-  padding-top: 125px;
+  padding-top: 85px;
   right: -50px;
   background: rgba(26, 70, 121, 0.5);
   height: 100vh;
@@ -820,6 +819,7 @@ footer {
   transform-origin: 0% 0%;
   transform: translate(100%, 0);
   transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+  top: -25px;
 }
 
 #mobile-nav li {
@@ -836,6 +836,10 @@ footer {
 #menuToggle input:checked ~ ul {
   transform: scale(1.0, 1.0);
   opacity: 1;
+}
+
+#menuToggle.open {
+    transform: scale(1.0, 1.0);
 }
 
 /* Large devices */
@@ -880,10 +884,6 @@ footer {
         display: block;
         cursor: pointer;
         position: fixed;
-    }
-
-    #mobile-nav {
-        display: none;
     }
 
     input[type="checkbox"]:checked ~ #mobile-nav {
